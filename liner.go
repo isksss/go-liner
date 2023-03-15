@@ -1,14 +1,14 @@
-package main
+package liner
 
 import (
 	"fmt"
+	"github.com/atotto/clipboard"
 	"os"
 	"strconv"
 	"strings"
-	"github.com/atotto/clipboard"
 )
 
-func main() {
+func Liner() {
 	args := os.Args[1:]
 	if len(args) < 1 {
 		fmt.Println("Usage: liner <num>")
@@ -24,8 +24,7 @@ func main() {
 	hashes := strings.Repeat("#", num)
 	fmt.Println(hashes)
 
-	if err := clipboard.WriteAll(hashes);err != nil {
+	if err := clipboard.WriteAll(hashes); err != nil {
 		fmt.Println("Failed to copy to clipboard:", err)
-		return
 	}
 }
