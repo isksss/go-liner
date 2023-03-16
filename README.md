@@ -1,8 +1,23 @@
 # go-liner
-if you type `liner ${num}`, this script print `#*num`.
+if you type `liner`, this script print `##########`.  
+And Copy to Clipboard.  
+
 ex)
-- `liner 5` -> #####
-- `liner 10` -> ##########
+- `liner -l 5 ` -> #####
+- `liner -l 10` -> ##########
+
+## Usage
+### Option
+- `-l`  
+  This Option is line length. (default 10)
+- `-m`  
+  Line Char. (default #)   
+  ex)  
+    `-m #`  -> ##########  
+    `-m ?`  -> ??????????  
+    `-m ##` -> ####################  
+- `-no`  
+  No Copy Flag.
 
 ## License
 MIT
